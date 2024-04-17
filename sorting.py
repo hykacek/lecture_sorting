@@ -37,9 +37,21 @@ def selection_sort(numbers, direction):
     return numbers
 
 
+def bubble_sort(numbers):
+    swapped = False
+    for i in range(len(numbers)):
+        for num_idx in range(len(numbers) -i-1):
+            if numbers[num_idx] > numbers[num_idx +1]:
+                numbers[num_idx], numbers[num_idx+1] = numbers[num_idx+1], numbers[num_idx]
+                swapped = True
+        if swapped == False:
+            return numbers
+    return numbers
+
+
 def main():
     numbers = read_data("numbers.csv")
-    sorted_series = selection_sort(numbers["series_1"], "descending")
+    sorted_series = bubble_sort(numbers["series_1"])
     print(sorted_series)
 
 if __name__ == '__main__':
