@@ -30,13 +30,13 @@ def selection_sort(numbers):
             if numbers[min_idx] > numbers[num_idx]:
                 min_idx = num_idx
         numbers[i], numbers[min_idx] = numbers[min_idx], numbers[i]
+    print(numbers)
     return numbers
 
 
 def main():
     numbers = read_data("numbers.csv")
     sorted_series = selection_sort(numbers["series_1"])
-    print(sorted_series)
 
 
 if __name__ == '__main__':
