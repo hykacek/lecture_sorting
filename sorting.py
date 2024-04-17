@@ -21,7 +21,6 @@ def read_data(file_name):
                     data[key] = [int(row[key])]
                 else:
                     data[key].append(int(row[key]))
-    print(data)
     return data
 
 
